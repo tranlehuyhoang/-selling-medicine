@@ -28,7 +28,22 @@ if (!isset($_SESSION['employ_name']) && !isset($_SESSION['admin_name'])) {
             <?php
             $i = 1;
             $id = $_GET['id'];
-            $sql = "SELECT * FROM cthd INNER JOIN mathang ON cthd.MaMH=mathang.MaMH WHERE MaHD = $id ";
+            if ($id == 1) {
+                $sql = "SELECT * FROM cthd
+                        INNER JOIN mathang ON cthd.MaMH = mathang.MaMH
+                        INNER JOIN hoadon ON cthd.MaHD = hoadon.MaHD
+                        WHERE hoadon.PhuongThucTT = 'Tiền mặt'";
+            } else if ($id == 2) {
+                $sql = "SELECT * FROM cthd
+                        INNER JOIN mathang ON cthd.MaMH = mathang.MaMH
+                        INNER JOIN hoadon ON cthd.MaHD = hoadon.MaHD
+                        WHERE hoadon.PhuongThucTT = 'Chuyển khoản'";
+            } else if ($id == 3) {
+                $sql = "SELECT * FROM cthd
+                        INNER JOIN mathang ON cthd.MaMH = mathang.MaMH
+                        INNER JOIN hoadon ON cthd.MaHD = hoadon.MaHD
+                        WHERE hoadon.PhuongThucTT = 'MOMO QR'";
+            }
 
             $result = $conn->query($sql);
 
@@ -39,12 +54,12 @@ if (!isset($_SESSION['employ_name']) && !isset($_SESSION['admin_name'])) {
                     $ThanhTien = $row['ThanhTien'];
                     echo '
             <tr>
-      <th scope="row">' . $i++ . '</th>
-      <td>' . $TenMH . '</td>
-      <td>' . $Soluong . '</td>
-      <td>' . $ThanhTien . '</td>
-    </tr>
-            ';
+                <th scope="row">' . $i++ . '</th>
+                <td>' . $TenMH . '</td>
+                <td>' . $Soluong . '</td>
+                <td>' . $ThanhTien . '</td>
+            </tr>
+        ';
                 }
             }
             ?>

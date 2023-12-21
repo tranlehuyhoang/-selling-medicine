@@ -15,12 +15,13 @@
         crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
     <style>
-        table th{
-            font-size: 30px;
-        }
-        table td{
-            font-size: 20px;
-        }
+    table th {
+        font-size: 30px;
+    }
+
+    table td {
+        font-size: 20px;
+    }
     </style>
 </head>
 
@@ -56,28 +57,28 @@
         $_SESSION['cart'] = [];
     }
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>THÔNG TIN THANH TOÁN</h1>
-<br>
-<br>
-<br>
-<div id="container" style="display:flex;flex-direction:column;justify-content:center;width:100%">
-<table border="1" style="width:100%">
-        <thead>
-            <tr>
-                <th>Ảnh sản phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Đơn giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>THÔNG TIN THANH TOÁN</h1>
+    <br>
+    <br>
+    <br>
+    <div id="container" style="display:flex;flex-direction:column;justify-content:center;width:100%">
+        <table border="1" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
             $tong=0;
             $i=0;
                 if(isset($_SESSION['cart'])){
@@ -96,36 +97,40 @@
                     }
                 }
             ?>
-        </tbody>
-        <thead>
-            <tr>
-                <td colspan="4" style="font-size:40px;font-weight:bold;color:red;">TOTAL :</td>
-                <td><?php echo  $tong.' vnđ'; ?></td>
-            </tr>
-        </thead>
-    </table>
-    <br>
-    <br>
-    <br>
-    <form action="" target="_blank" method="POST">
-    <div id="btn" style="display:flex; width:90%;column-gap: 2% ;justify-content:right;">
-    <input type="number" value="<?php echo  $tong; ?>" name="total" hidden>
-    <input type="radio" id="method1"  name="method" checked value="Tiền mặt"><label for="method1" >Tiền mặt</label>
-    <input type="radio" id="method2"  name="method" value="Chuyển khoản"><label for="method2">Chuyển khoản</label>
-    <button type="submit" name="checkout" style="width:10%; height:50px;">THANH TOÁN</button>
+            </tbody>
+            <thead>
+                <tr>
+                    <td colspan="4" style="font-size:40px;font-weight:bold;color:red;">TOTAL :</td>
+                    <td><?php echo  $tong.' vnđ'; ?></td>
+                </tr>
+            </thead>
+        </table>
+        <br>
+        <br>
+        <br>
+        <form action="" target="_blank" method="POST">
+            <div id="btn" style="display:flex; width:90%;column-gap: 2% ;justify-content:right;">
+                <input type="number" value="<?php echo  $tong; ?>" name="total" hidden>
+                <input type="radio" id="method1" name="method" checked value="Tiền mặt"><label for="method1">Tiền
+                    mặt</label>
+                <input type="radio" id="method2" name="method" value="Chuyển khoản"><label for="method2">Chuyển
+                    khoản</label>
+                <button type="submit" name="checkout" style="width:10%; height:50px;">THANH TOÁN</button>
+            </div>
+        </form>
+        <br>
+        <form action="momo/xulythanhtoanmomo.php" target="_blank" method="POST"
+            enctype="application/x-www-form-urlencoded">
+            <div id="btn" style="display:flex; width:90%; justify-content:right;">
+                <input type="number" value="<?php echo  $tong; ?>" name="total" hidden>
+                <button type="submit" name="checkout"
+                    style="width:10%; height:50px; background-color: red;color:white">QUÉT MÃ MOMO</button>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
     </div>
-    </form>
-    <br>
-    <form action="momo/xulythanhtoanmomo.php" target="_blank" method="POST" enctype="application/x-www-form-urlencoded">
-    <div id="btn" style="display:flex; width:90%; justify-content:right;">
-    <input type="number" value="<?php echo  $tong; ?>" name="total" hidden>
-    <button type="submit" name="checkout" style="width:10%; height:50px; background-color: red;color:white">QUÉT MÃ MOMO</button>
-    </div>
-    </form>
-    <br>
-    <br>
-    <br>
-</div>
     <?php include_once 'footer.php' ?>
 </body>
 
