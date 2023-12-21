@@ -1,0 +1,110 @@
+class SpecialHeader extends HTMLElement{
+    ConnectedCallback() {
+        this.innerHTML = `
+        <nav class="navbar">
+        <div class="nav">
+            <img src="img/pharmalogo.svg" alt="logo"><a href="index.html"></a>  <!--logo-->
+            <div></div>
+
+            
+            <div class="wrapper">
+                <div class="menu_logo"><a href="#"></a></div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">Dược phẩm</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Thuốc không kê đơn</a></li>
+                            <li><a href="#">Thuốc kê đơn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Chăm sóc sức khỏe</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Thực phẩm dinh dưỡng</a></li>
+                            <li><a href="#">Dụng cụ sơ cứu</a></li>
+                            <li><a href="#">Kế hoạch gia đình</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Chăm sóc cá nhân</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Sản phẩm phòng tắm</a></li>
+                            <li><a href="#">Sản phẩm khử mùi</a></li>
+                            <li><a href="#">Chăm sóc tóc</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sản phẩm tiện lợi</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Hàng tổng hợp</a></li>
+                            <li><a href="#">Hàng bách hóa</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Thực phẩm chức năng</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">TPCN Nhóm dạ dày</a></li>
+                            <li><a href="#">TPCN Nhóm tim mạch</a></li>
+                            <li><a href="#">TPCN Nhóm đường huyết</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Mẹ và Bé</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Chăm sóc em bé</a></li>
+                            <li><a href="#">TPCN dành cho trẻ</a></li>
+                            <li><a href="#">Sản phẩm dành cho mẹ</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Chăm sóc sắc đẹp</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Chăm sóc mặt</a></li>
+                            <li><a href="#">Sản phẩm chống nắng</a></li>
+                            <li><a href="#">Dụng cụ làm đẹp</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Thiết bị y tế</a>
+                        <ul class="drop-menu">
+                            <li><a href="#">Nhiệt kế</a></li>
+                            <li><a href="#">Máy đo huyết áp</a></li>
+                            <li><a href="#">Máy đo đường huyết</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="download-app">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Download App</p>
+            </div>
+
+            <ul>
+                <li id="open_login">
+                    <i class="fa-regular fa-user"></i>
+                    <p style = "color: white">Đăng ký | Đăng nhập</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-percent"></i>
+                        <p style = "color: white">Ưu đãi</p>
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p style = "color: white">Giỏ hàng</p>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+        `
+    }
+}

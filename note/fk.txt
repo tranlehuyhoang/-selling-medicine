@@ -1,0 +1,14 @@
+FK_DOANHTHU_MAKH
+FK_DONDH_MAKH
+FK_HOADON_MAKH
+FK_PTTHANHTOAN_MAKH
+
+
+Dược phẩm: Thuốc không kê đơn , Thuốc kê đơn
+Chăm sóc sức khỏe: Thực phẩm dinh dưỡng, Dụng cụ sơ cứu, Kế hoạch gia đình
+Chăm sóc cá nhân: Sản phẩm phòng tắm, Sản phẩm khử mùi, Chăm sóc tóc
+Sản phẩm tiện lợi: Hàng tổng hợp, Hàng bách hóa
+Thực phẩm chức năng: TPCN Nhóm dạ dày, TPCN Nhóm tim mạch, TPCN Nhóm đường huyết
+Mẹ và Bé: Chăm sóc em bé, TPCN dành cho trẻ, Sản phẩm dành cho mẹ
+Chăm sóc sắc đẹp: Chăm sóc mặt, Sản phẩm chống nắng, Dụng cụ làm đẹp
+Thiết bị y tế: Nhiệt kế, Máy đo huyết áp, Máy đo đường huyết

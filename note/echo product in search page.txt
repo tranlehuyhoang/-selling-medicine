@@ -1,0 +1,12 @@
+"<article class= 'preferential'>
+                    <div>
+                        <img src=''>".$row['Hinh']."</img>
+                    </div>
+                    <div class='preferential__info'>
+                        <h4>".$row['TenMH']."</h4>
+                        <p>
+                            ".$row['GiaBan']."
+                        </p>
+                        <a href='preferential.html' class='btn btn-primary'>Thêm vào giỏ hàng</a>
+                    </div>
+                </article>";

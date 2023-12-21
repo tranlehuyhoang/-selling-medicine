@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --text-color: #30363c;
+    --main-color: rgb(7, 161, 161);
+    --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --shadow-border: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    color: var(--text-color);
+}
+
+
+/* ================== RESULT FOR SEARCH ============= */
+
+.result_for_search{
+    margin-top: 150px;
+    max-width: 1100px;
+    margin-bottom: 50px;
+    max-width: 1100px;
+    padding-right: .75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: 14rem;
+}
+/* Your other CSS styles */
+
+.sidebar {
+    width: 80%;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    color: #333; /* Màu chữ */
+    font-size: 18px; /* Cỡ chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.sidebar ul {
+    list-style: none; /* Loại bỏ dấu đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+.sidebar li {
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+}
+
+.sidebar a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #666; /* Màu chữ */
+}
+
+.sidebar a:hover {
+    color: #333; /* Màu chữ khi di chuột qua */
+}
+
+.categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.categories li {
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+}
+
+.categories li:last-child {
+    border-right: none;
+}
+
+.categories li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px; /* Khoảng cách giữa các kết quả */
+    margin-top: 150px; /* Khoảng cách từ đỉnh trang xuống */
+    padding: 0 15px;
+}
+
+.container.search-item {
+    display: inline-block;
+    vertical-align: top; /* Dọc theo đỉnh của phần tử cha */
+    width: 30%; /* Điều chỉnh kích thước chiều rộng của mỗi kết quả */
+    margin: 10px; /* Khoảng cách giữa các kết quả */
+    text-align: center; /* Căn giữa nội dung */
+}   
+
+.container.search-item .search-result {
+    background-color: rgb(221, 241, 255);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.container.search-item .search-result > div > img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container.search-item .search-result:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.container.search-item .search-info {
+    padding: 2rem;
+}
+
+.container.search-item .search-info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.container.search-item .btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.container.search-item .btn:hover {
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.container.search-item .btn-primary {
+    background: #5dac46;
+    color: #fff;
+}
+
+
+
